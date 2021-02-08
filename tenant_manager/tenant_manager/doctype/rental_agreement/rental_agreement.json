@@ -1,0 +1,128 @@
+{
+ "actions": [],
+ "autoname": "RA.#####",
+ "creation": "2021-02-08 01:10:14.138467",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "tenant_name",
+  "property",
+  "rental_fee",
+  "term",
+  "amended_from",
+  "utilities",
+  "electricity",
+  "internet",
+  "security",
+  "waste_management"
+ ],
+ "fields": [
+  {
+   "fieldname": "tenant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tenant Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Property",
+   "options": "Premises",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rental_fee",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Rental Fee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "term",
+   "fieldtype": "Duration",
+   "in_list_view": 1,
+   "label": "Term",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "utilities",
+   "fieldtype": "Column Break",
+   "label": "Utilities"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Rental Agreement",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "electricity",
+   "fieldtype": "Check",
+   "label": "Electricity"
+  },
+  {
+   "default": "0",
+   "fieldname": "internet",
+   "fieldtype": "Check",
+   "label": "Internet"
+  },
+  {
+   "default": "0",
+   "fieldname": "security",
+   "fieldtype": "Check",
+   "label": "Security"
+  },
+  {
+   "default": "0",
+   "fieldname": "waste_management",
+   "fieldtype": "Check",
+   "label": "Waste Management"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2021-02-08 01:13:58.211062",
+ "modified_by": "Administrator",
+ "module": "Tenant Manager",
+ "name": "Rental Agreement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Agent",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,128 @@
+{
+ "actions": [],
+ "autoname": "TEN.#####",
+ "creation": "2021-02-08 01:03:22.189947",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "first_name",
+  "last_name",
+  "full_name",
+  "occupancy",
+  "start_date",
+  "expiry_date",
+  "rent_paid",
+  "property",
+  "rental_fee",
+  "advance_rent",
+  "rent_due",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "1",
+   "fieldname": "occupancy",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Occupancy",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "label": "Expiry Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rent_paid",
+   "fieldtype": "Float",
+   "label": "Rent Paid"
+  },
+  {
+   "fetch_from": "premises.address",
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Premises"
+  },
+  {
+   "fetch_from": "rental_agreement.rental_fee",
+   "fieldname": "rental_fee",
+   "fieldtype": "Link",
+   "label": "Rental Fee",
+   "options": "Rental Agreement"
+  },
+  {
+   "default": "0",
+   "fieldname": "advance_rent",
+   "fieldtype": "Float",
+   "label": "Advance Rent",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "rent_due",
+   "fieldtype": "Float",
+   "label": "Rent Due",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Tenant",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2021-02-08 01:27:52.477182",
+ "modified_by": "Administrator",
+ "module": "Tenant Manager",
+ "name": "Tenant",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
