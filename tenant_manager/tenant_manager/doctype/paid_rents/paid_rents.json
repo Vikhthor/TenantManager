@@ -8,7 +8,8 @@
   "tenant",
   "property",
   "amount_paid",
-  "payment_method"
+  "payment_method",
+  "expected_rent"
  ],
  "fields": [
   {
@@ -35,11 +36,16 @@
    "fieldtype": "Select",
    "label": "Payment Method",
    "options": "Cash\nCheque\nPayPal\nUSSD\nCredit Card"
+  },
+  {
+   "fieldname": "expected_rent",
+   "fieldtype": "Float",
+   "label": "Expected Rent"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-02-08 01:22:36.653153",
+ "modified": "2021-02-08 02:05:58.885866",
  "modified_by": "Administrator",
  "module": "Tenant Manager",
  "name": "Paid Rents",
