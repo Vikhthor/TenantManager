@@ -1,7 +1,7 @@
 {
  "actions": [],
- "autoname": "TEN.#####",
- "creation": "2021-02-08 01:03:22.189947",
+ "autoname": "field:full_name",
+ "creation": "2021-02-09 08:41:03.295772",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
@@ -9,6 +9,8 @@
   "first_name",
   "last_name",
   "full_name",
+  "email",
+  "contract",
   "occupancy",
   "start_date",
   "expiry_date",
@@ -20,67 +22,6 @@
   "amended_from"
  ],
  "fields": [
-  {
-   "default": "1",
-   "fieldname": "occupancy",
-   "fieldtype": "Int",
-   "in_list_view": 1,
-   "label": "Occupancy",
-   "reqd": 1
-  },
-  {
-   "fieldname": "start_date",
-   "fieldtype": "Date",
-   "label": "Start Date"
-  },
-  {
-   "fieldname": "expiry_date",
-   "fieldtype": "Date",
-   "label": "Expiry Date",
-   "read_only": 1
-  },
-  {
-   "fieldname": "rent_paid",
-   "fieldtype": "Float",
-   "label": "Rent Paid"
-  },
-  {
-   "fetch_from": "premises.address",
-   "fieldname": "property",
-   "fieldtype": "Link",
-   "label": "Property",
-   "options": "Premises"
-  },
-  {
-   "fetch_from": "rental_agreement.rental_fee",
-   "fieldname": "rental_fee",
-   "fieldtype": "Link",
-   "label": "Rental Fee",
-   "options": "Rental Agreement"
-  },
-  {
-   "default": "0",
-   "fieldname": "advance_rent",
-   "fieldtype": "Float",
-   "label": "Advance Rent",
-   "read_only": 1
-  },
-  {
-   "default": "0",
-   "fieldname": "rent_due",
-   "fieldtype": "Float",
-   "label": "Rent Due",
-   "read_only": 1
-  },
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Tenant",
-   "print_hide": 1,
-   "read_only": 1
-  },
   {
    "fieldname": "first_name",
    "fieldtype": "Data",
@@ -96,14 +37,89 @@
   {
    "fieldname": "full_name",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Full Name",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "label": "Contract",
+   "options": "Contract",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "occupancy",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Occupancy",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "contract.start_date",
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date"
+  },
+  {
+   "fetch_from": "contract.expiry_date",
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "label": "Expiry Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rent_paid",
+   "fieldtype": "Currency",
+   "label": "Rent Paid",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "contract.property",
+   "fieldname": "property",
+   "fieldtype": "Data",
+   "label": "Property",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "contract.rental_fee",
+   "fieldname": "rental_fee",
+   "fieldtype": "Currency",
+   "label": "Rental Fee",
+   "read_only": 1
+  },
+  {
+   "fieldname": "advance_rent",
+   "fieldtype": "Currency",
+   "label": "Advance Rent"
+  },
+  {
+   "fieldname": "rent_due",
+   "fieldtype": "Currency",
+   "label": "Rent Due"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Tenant",
+   "print_hide": 1,
    "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-02-08 01:27:52.477182",
+ "modified": "2021-02-09 09:00:32.612987",
  "modified_by": "Administrator",
  "module": "Tenant Manager",
  "name": "Tenant",

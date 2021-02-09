@@ -1,6 +1,6 @@
 {
  "actions": [],
- "autoname": "PRE.#####",
+ "autoname": "field:address",
  "creation": "2021-02-08 00:45:30.743771",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -8,8 +8,7 @@
  "field_order": [
   "address",
   "state",
-  "status",
-  "owner"
+  "status"
  ],
  "fields": [
   {
@@ -17,7 +16,8 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Address",
-   "reqd": 1
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "state",
@@ -27,22 +27,16 @@
    "reqd": 1
   },
   {
+   "default": "Vacant",
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
    "options": "Vacant\nOccupied"
-  },
-  {
-   "fetch_from": "owners.full_name",
-   "fieldname": "owner",
-   "fieldtype": "Link",
-   "label": "Owner",
-   "options": "Owners"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-02-08 01:53:28.420601",
+ "modified": "2021-02-08 14:13:07.613172",
  "modified_by": "Administrator",
  "module": "Tenant Manager",
  "name": "Premises",

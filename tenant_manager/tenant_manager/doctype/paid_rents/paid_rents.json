@@ -1,15 +1,17 @@
 {
  "actions": [],
+ "autoname": "format:{DD}/{MM}/{YY} - {tenant}",
  "creation": "2021-02-08 01:22:36.653153",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "tenant",
+  "payment_method",
+  "contract",
   "property",
   "amount_paid",
-  "payment_method",
-  "expected_rent"
+  "actual_rent"
  ],
  "fields": [
   {
@@ -20,16 +22,17 @@
    "options": "Tenant"
   },
   {
+   "fetch_from": "contract.property",
    "fieldname": "property",
-   "fieldtype": "Link",
-   "label": "Property",
-   "options": "Premises"
+   "fieldtype": "Data",
+   "label": "Property"
   },
   {
+   "fetch_from": "tenant.rent_paid",
    "fieldname": "amount_paid",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Amount Paid",
-   "options": "Tenant"
+   "read_only": 1
   },
   {
    "fieldname": "payment_method",
@@ -38,14 +41,24 @@
    "options": "Cash\nCheque\nPayPal\nUSSD\nCredit Card"
   },
   {
-   "fieldname": "expected_rent",
-   "fieldtype": "Float",
-   "label": "Expected Rent"
+   "fetch_from": "contract.rental_fee",
+   "fieldname": "actual_rent",
+   "fieldtype": "Data",
+   "label": "Actual Rent",
+   "read_only": 1
+  },
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Contract",
+   "options": "Contract",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-02-08 02:05:58.885866",
+ "modified": "2021-02-09 09:16:01.488335",
  "modified_by": "Administrator",
  "module": "Tenant Manager",
  "name": "Paid Rents",

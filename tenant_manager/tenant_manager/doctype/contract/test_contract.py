@@ -6,5 +6,5 @@ from __future__ import unicode_literals
 # import frappe
 import unittest
 
-class TestRentalAgreement(unittest.TestCase):
+class TestContract(unittest.TestCase):
 	pass

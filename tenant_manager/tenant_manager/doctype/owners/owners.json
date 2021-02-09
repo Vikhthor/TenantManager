@@ -1,14 +1,17 @@
 {
  "actions": [],
- "autoname": "OWN.#####",
+ "autoname": "field:full_name",
  "creation": "2021-02-08 01:17:59.851907",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "title",
   "first_name",
   "last_name",
-  "property"
+  "full_name",
+  "property",
+  "email"
  ],
  "fields": [
   {
@@ -24,15 +27,35 @@
    "label": "Last Name"
   },
   {
+   "fetch_from": "premises.state",
    "fieldname": "property",
    "fieldtype": "Link",
    "label": "Property",
-   "options": "Premises"
+   "options": "Premises",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Select",
+   "label": "Title",
+   "options": "Mr\nMrs"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "read_only": 1,
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-02-08 01:17:59.851907",
+ "modified": "2021-02-08 14:12:44.070440",
  "modified_by": "Administrator",
  "module": "Tenant Manager",
  "name": "Owners",
