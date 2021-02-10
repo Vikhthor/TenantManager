@@ -106,13 +106,14 @@
    "fieldname": "rental_fee",
    "fieldtype": "Currency",
    "label": "Rental Fee",
+   "options": "NGN ",
    "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-02-09 07:55:17.196019",
+ "modified": "2021-02-09 17:20:57.097750",
  "modified_by": "Administrator",
  "module": "Tenant Manager",
  "name": "Contract",
