@@ -9,6 +9,7 @@
   "first_name",
   "last_name",
   "full_name",
+  "image",
   "email",
   "contract",
   "occupancy",
@@ -114,12 +115,18 @@
    "options": "Tenant",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
   }
  ],
+ "image_field": "image",
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-02-09 09:00:32.612987",
+ "modified": "2021-02-12 11:44:58.571130",
  "modified_by": "Administrator",
  "module": "Tenant Manager",
  "name": "Tenant",
