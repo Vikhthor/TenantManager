@@ -30,7 +30,7 @@
   {
    "fetch_from": "tenant.rent_paid",
    "fieldname": "amount_paid",
-   "fieldtype": "Data",
+   "fieldtype": "Currency",
    "label": "Amount Paid",
    "read_only": 1
   },
@@ -43,7 +43,7 @@
   {
    "fetch_from": "contract.rental_fee",
    "fieldname": "actual_rent",
-   "fieldtype": "Data",
+   "fieldtype": "Currency",
    "label": "Actual Rent",
    "read_only": 1
   },
@@ -58,7 +58,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-02-09 09:16:01.488335",
+ "modified": "2021-02-12 13:38:55.403905",
  "modified_by": "Administrator",
  "module": "Tenant Manager",
  "name": "Paid Rents",
