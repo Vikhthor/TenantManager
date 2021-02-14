@@ -11,5 +11,8 @@ frappe.ui.form.on('Owners', {
                 owner: frm.doc.full_name
             })
         })
+    },
+    before_save: function(frm) {
+        frm.doc.full_name = frm.doc.first_name + ' ' + frm.doc.last_name;
     }
 });
